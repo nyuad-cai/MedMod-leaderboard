@@ -29,12 +29,22 @@
       
       {% if site.github.is_project_page %}
           <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-        {% endif %}
-        <!-- {% if site.show_downloads %} -->
-          <!-- <a href="{{ site.github.paper_url }}" class="btn">Paper</a> -->
-          <a href="#" class="btn">Paper</a>
-          <!-- <a href="#leaderboards" class="btn">Leaderboards</a> -->
-        <!-- {% endif %} -->
+      {% endif %}
+      
+      <a href="#" class="btn">Paper</a>
+      
+      {% if page.show_submit_btn %}
+      <a href="https://forms.gle/VapUvQMZ8hsADUWA8" class="btn_update">Submit new results</a>
+      {% endif %}
+
+      {% if page.show_uniimodal_btn %}
+      <a href="multimodal.html" class="btn_update">Multimodal baselines</a>
+      {% endif %}
+
+      {% if page.show_multimodal_btn %}
+      <a href="unimodal.html" class="btn_update">Unimodal baselines</a>
+      {% endif %}
+    
     </header>
 
     <main id="content" class="main-content" role="main">
