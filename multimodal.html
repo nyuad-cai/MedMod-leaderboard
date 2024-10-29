@@ -5,8 +5,8 @@ show_home_btn: True
 
 <h1 style="text-align:center">Multimodal baselines</h1>
 
-<h2 style="text-align:center">Supervised models</h2>
-<table id="supervisedModelsMultimodal" class="display dt-head-right">
+<h2 style="text-align:center">Supervised models: pretrained weights</h2>
+<table id="supervisedPretrained" class="display dt-head-right">
     <thead>
         <tr>
             <th rowspan="2" width="15%">Method</th>
@@ -61,29 +61,6 @@ show_home_btn: True
             <td>0.727</td>
             <td>0.334</td>
         </tr>
-
-        <tr>
-            <td>Joint fusion</td>
-            <!-- Mortality -->
-            <td>0.821</td>
-            <td>0.463</td>
-
-            <!-- Clinical conditions -->
-            <td>0.742</td>
-            <td>0.435</td>
-
-            <!-- Decompensation -->
-            <td>0.866</td>
-            <td>0.240</td>
-
-            <!-- Length of stay -->
-            <td>0.235</td>
-            <td>144.8</td>
-
-            <!-- Radiology -->
-            <td>0.642</td>
-            <td>0.281</td>
-        </tr>
                    
         <tr>
             <td>Late fusion</td>
@@ -130,11 +107,66 @@ show_home_btn: True
             <td>0.717</td>
             <td>0.335</td>
         </tr>
-        <!-- <tr> -->
-            <th colspan="6" text-align="center" data-dt-order="disable">
-                Multimodal (Random Initialization)
-            </th>
-        <!-- </tr> -->
+    </tbody>
+</table>
+
+<h2 style="text-align:center">Supervised models: randomly initialized weights</h2>
+<table id="supervisedRandomInit" class="display dt-head-right">
+    <thead>
+        <tr>
+            <th rowspan="2" width="15%">Method</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">In-hospital mortality</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Clinical conditions</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Decompensation</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Length of stay</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Radiology</th>
+        </tr>
+        <tr>
+            <!-- Mortality -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+            
+            <!-- Clinical conditions -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Decompensation -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Length of stay -->
+            <th>KAPPA</th>
+            <th>MAD</th>
+
+            <!-- Radiology -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Joint fusion</td>
+            <!-- Mortality -->
+            <td>0.821</td>
+            <td>0.463</td>
+
+            <!-- Clinical conditions -->
+            <td>0.742</td>
+            <td>0.435</td>
+
+            <!-- Decompensation -->
+            <td>0.866</td>
+            <td>0.240</td>
+
+            <!-- Length of stay -->
+            <td>0.235</td>
+            <td>144.8</td>
+
+            <!-- Radiology -->
+            <td>0.642</td>
+            <td>0.281</td>
+        </tr>
+        
         <tr>
             <td>MMTM</td>
             <!-- Mortality -->
@@ -183,7 +215,7 @@ show_home_btn: True
     </tbody>
 </table>
 
-<h2 style="text-align:center"> Linear probing</h2>
+<h2 style="text-align:center"> Self-supervised models: linear probing</h2>
 <table id="linearProbingMultimodal" class="display dt-head-right">
     <thead>
         <tr>
@@ -289,7 +321,7 @@ show_home_btn: True
     </tbody>
 </table>
 
-<h2 style="text-align:center"> Fine-tuning</h2>
+<h2 style="text-align:center"> Self-supervised models: fine-tuning</h2>
 <table id="fineTuningMultimodal" class="display dt-head-right">
     <thead>
         <tr>
