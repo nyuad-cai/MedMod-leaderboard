@@ -1,0 +1,418 @@
+---
+layout: default
+show_home_btn: True
+---
+
+<h1 style="text-align:center">Multimodal baselines</h1>
+
+<h2 style="text-align:center">Supervised models</h2>
+<table id="supervisedModelsMultimodal" class="display dt-head-right">
+    <thead>
+        <tr>
+            <th rowspan="2" width="15%">Method</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">In-hospital mortality</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Clinical conditions</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Decompensation</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Length of stay</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Radiology</th>
+        </tr>
+        <tr>
+            <!-- Mortality -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+            
+            <!-- Clinical conditions -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Decompensation -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Length of stay -->
+            <th>KAPPA</th>
+            <th>MAD</th>
+
+            <!-- Radiology -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Early fusion</td>
+            <!-- Mortality -->
+            <td>0.845</td>
+            <td>0.488</td>
+
+            <!-- Clinical conditions -->
+            <td>0.741</td>
+            <td>0.433</td>
+
+            <!-- Decompensation -->
+            <td>0.864</td>
+            <td>0.147</td>
+
+            <!-- Length of stay -->
+            <td>0.370</td>
+            <td>447.0</td>
+
+            <!-- Radiology -->
+            <td>0.727</td>
+            <td>0.334</td>
+        </tr>
+
+        <tr>
+            <td>Joint fusion</td>
+            <!-- Mortality -->
+            <td>0.821</td>
+            <td>0.463</td>
+
+            <!-- Clinical conditions -->
+            <td>0.742</td>
+            <td>0.435</td>
+
+            <!-- Decompensation -->
+            <td>0.866</td>
+            <td>0.240</td>
+
+            <!-- Length of stay -->
+            <td>0.235</td>
+            <td>144.8</td>
+
+            <!-- Radiology -->
+            <td>0.642</td>
+            <td>0.281</td>
+        </tr>
+                   
+        <tr>
+            <td>Late fusion</td>
+            <!-- Mortality -->
+            <td>0.835</td>
+            <td>0.482</td>
+
+            <!-- Clinical conditions -->
+            <td>0.743</td>
+            <td>0.438</td>
+
+            <!-- Decompensation -->
+            <td>0.866</td>
+            <td>0.256</td>
+
+            <!-- Length of stay -->
+            <td>0.339</td>
+            <td>142.3</td>
+
+            <!-- Radiology -->
+            <td>0.730</td>
+            <td>0.329</td>
+        </tr>
+
+        <tr>
+            <td>MedFuse</td>
+            <!-- Mortality -->
+            <td>0.823</td>
+            <td>0.477</td>
+
+            <!-- Clinical conditions -->
+            <td>0.757</td>
+            <td>0.464</td>
+
+            <!-- Decompensation -->
+            <td>0.832</td>
+            <td>0.180</td>
+
+            <!-- Length of stay -->
+            <td>0.311</td>
+            <td>142.8</td>
+
+            <!-- Radiology -->
+            <td>0.717</td>
+            <td>0.335</td>
+        </tr>
+
+        <tr>
+            <td>MMTM</td>
+            <!-- Mortality -->
+            <td>0.805</td>
+            <td>0.315</td>
+
+            <!-- Clinical conditions -->
+            <td>0.730</td>
+            <td>0.366</td>
+
+            <!-- Decompensation -->
+            <td>0.841</td>
+            <td>0.106</td>
+
+            <!-- Length of stay -->
+            <td>0.260</td>
+            <td>144.1</td>
+
+            <!-- Radiology -->
+            <td>0.648</td>
+            <td>0.279</td>
+        </tr>
+
+        <tr>
+            <td>DAFT</td>
+            <!-- Mortality -->
+            <td>0.812</td>
+            <td>0.480</td>
+
+            <!-- Clinical conditions -->
+            <td>0.727</td>
+            <td>0.419</td>
+
+            <!-- Decompensation -->
+            <td>0.751</td>
+            <td>0.071</td>
+
+            <!-- Length of stay -->
+            <td>0.412</td>
+            <td>171.8</td>
+
+            <!-- Radiology -->
+            <td>0.656</td>
+            <td>0.290</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 style="text-align:center"> Linear probing</h2>
+<table id="linearProbingMultimodal" class="display dt-head-right">
+    <thead>
+        <tr>
+            <th rowspan="2" width="15%">Method</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">In-hospital mortality</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Clinical conditions</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Decompensation</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Length of stay</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Radiology</th>
+        </tr>
+        <tr>
+            <!-- Mortality -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+            
+            <!-- Clinical conditions -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Decompensation -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Length of stay -->
+            <th>KAPPA</th>
+            <th>MAD</th>
+
+            <!-- Radiology -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>ConVIRT</td>
+            <!-- Mortality -->
+            <td>0.844</td>
+            <td>0.484</td>
+
+            <!-- Clinical conditions -->
+            <td>0.697</td>
+            <td>0.373</td>
+
+            <!-- Decompensation -->
+            <td>0.894</td>
+            <td>0.291</td>
+
+            <!-- Length of stay -->
+            <td>0.379</td>
+            <td>141.9</td>
+
+            <!-- Radiology -->
+            <td>0.656</td>
+            <td>0.283</td>
+        </tr>
+
+        <tr>
+            <td>VICReg</td>
+            <!-- Mortality -->
+            <td>0.816</td>
+            <td>0.453</td>
+
+            <!-- Clinical conditions -->
+            <td>0.642</td>
+            <td>0.327</td>
+
+            <!-- Decompensation -->
+            <td>0.867</td>
+            <td>0.228</td>
+
+            <!-- Length of stay -->
+            <td>0.367</td>
+            <td>141.9</td>
+
+            <!-- Radiology -->
+            <td>0.616</td>
+            <td>0.245</td>
+        </tr>
+
+        <tr>
+            <td>ALIGN</td>
+            <!-- Mortality -->
+            <td>0.799</td>
+            <td>0.459</td>
+          
+            <!-- Clinical conditions -->
+            <td>0.660</td>
+            <td>0.362</td>
+
+            <!-- Decompensation -->
+            <td>0.872</td>
+            <td>0.265</td>
+
+            <!-- Length of stay -->
+            <td>0.331</td>
+            <td>141.9</td>
+
+            <!-- Radiology -->
+            <td>0.656</td>
+            <td>0.277</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 style="text-align:center"> Fine-tuning</h2>
+<table id="fineTuningMultimodal" class="display dt-head-right">
+    <thead>
+        <tr>
+            <th rowspan="2" width="15%">Method</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">In-hospital mortality</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Clinical conditions</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Decompensation</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Length of stay</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Radiology</th>
+        </tr>
+        <tr>
+            <!-- Mortality -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+            
+            <!-- Clinical conditions -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Decompensation -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Length of stay -->
+            <th>KAPPA</th>
+            <th>MAD</th>
+
+            <!-- Radiology -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ConVIRT</td>
+            <!-- Mortality -->
+            <td>0.819</td>
+            <td>0.445</td>
+
+            <!-- Clinical conditions -->
+            <td>0.725</td>
+            <td>0.428</td>
+
+            <!-- Decompensation -->
+            <td>0.857</td>
+            <td>0.085</td>
+
+            <!-- Length of stay -->
+            <td>0.371</td>
+            <td>101.5</td>
+
+            <!-- Radiology -->
+            <td>0.662</td>
+            <td>0.283</td>
+        </tr>
+
+        <tr>
+            <td>VICReg</td>
+            <!-- Mortality -->
+            <td>0.844</td>
+            <td>0.502</td>
+
+            <!-- Clinical conditions -->
+            <td>0.695</td>
+            <td>0.399</td>
+
+            <!-- Decompensation -->
+            <td>0.836</td>
+            <td>0.048</td>
+
+            <!-- Length of stay -->
+            <td>0.383</td>
+            <td>109.0</td>
+
+            <!-- Radiology -->
+            <td>0.638</td>
+            <td>0.270</td>
+        </tr>
+
+        <tr>
+            <td>ALIGN</td>
+            <!-- Mortality -->
+            <td>0.820</td>
+            <td>0.479</td>
+ 
+            <!-- Clinical conditions -->
+            <td>0.709</td>
+            <td>0.419</td>
+
+            <!-- Decompensation -->
+            <td>0.846</td>
+            <td>0.062</td>
+
+            <!-- Length of stay -->
+            <td>0.378</td>
+            <td>101.8</td>
+
+            <!-- Radiology -->
+            <td>0.633</td>
+            <td>0.263</td>
+
+        </tr>
+    </tbody>
+</table>
+
+<script>
+$(document).ready( function () {
+    $('#supervisedModelsMultimodal').DataTable();
+} );
+
+$(document).ready( function () {
+    $('#linearProbingMultimodal').DataTable();
+} );
+
+$(document).ready( function () {
+    $('#fineTuningMultimodal').DataTable();
+} );
+</script>
+
+<a href="https://forms.gle/VapUvQMZ8hsADUWA8" class="btn_update">Submit new results</a>
+
+<h1 id="leaderboards">Leaderboards</h1>
+<div class="leaderboardcontainer">
+<a href="#" class="btn_update">Back to top</a>
+<br>
+<a href="./" class="btn_update">Home</a>
+<br>
+<a href="unimodal.html" class="btn_update">Unimodal baselines</a>
+</div>
